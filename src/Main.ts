@@ -1,6 +1,10 @@
-import {output} from "./Numbers";
+import {Add, Sub} from "./operator/Operators";
+import Operators from "./operator/Operators";
+import { addSyntheticLeadingComment } from "typescript";
 function main():void{
-    let array:Array<number> = [2,3,4];
-    output(array);
+    const add = new Operators.Add();
+    const sub = new Operators.Sub();
+    console.log(add.eval(3,4));
+    console.log(sub.eval(3,4));
 }
 main();
